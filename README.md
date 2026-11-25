@@ -1,3 +1,89 @@
+> **这是 `sf183-cyber` 的备份 fork，不是上游项目。**
+> This is a personal backup fork. The original project is
+> [maiziman/SpriteStage-Soccer](https://github.com/maiziman/SpriteStage-Soccer).
+
+| 项目 | 说明 |
+|---|---|
+| 上游仓库 | [maiziman/SpriteStage-Soccer](https://github.com/maiziman/SpriteStage-Soccer) |
+| Fork 时间 | 2026-11-25 |
+| Fork 时对应的上游提交 | `95fb97f7f166ea0b0cd9a9240f14f3074833a4fd`（`main`，即上游 `v1.0`） |
+| 本 fork 的用途 | 只做离线留档，不开发、不发 PR、不追踪上游更新 |
+| 代码许可 | MIT（见 `LICENSE`，版权归原作者） |
+| 包含游戏数据 | **否**（源码中不含任何 `.nes` 文件） |
+
+本仓库的全部代码、美术资产与文档均由上游作者 **maiziman** 创作。此处仅作副本保存，
+如与上游出现差异，**以上游为准**。
+
+---
+
+## 上游 Release 说明（v1.0）
+
+本 fork **不包含 Release 二进制**。GitHub 的 fork 只复制 git 内容，不会复制 Release 资产，
+下面这份记录用于备查。
+
+| 项 | 值 |
+|---|---|
+| 上游 Release | [v1.0 — SpriteStage-Soccer 1.0 (Windows x64)](https://github.com/maiziman/SpriteStage-Soccer/releases/tag/v1.0) |
+| 发布时间 | 2026-11-25 06:54 UTC |
+| 资产文件名 | `SpriteStage-Soccer-Windows-x64.zip` |
+| 大小 | 237,481,073 字节（约 226 MiB） |
+| SHA-256 | `f2fa4a23d1cea491253045cec7021e4f7ace2bd296c4bb6502c4351cc73323da` |
+| 平台 | Windows x64，免安装，解压即用，无需管理员权限 |
+| 下载地址 | https://github.com/maiziman/SpriteStage-Soccer/releases/download/v1.0/SpriteStage-Soccer-Windows-x64.zip |
+
+### 运行步骤（摘自上游 Release 说明）
+
+1. 下载上面的 zip 并解压到短路径（例如 `C:\Tools\SpriteStage-Soccer`）。
+2. **包内不含游戏。** 自备 `Kunio-kun no Nekketsu Soccer League (Japan)` 的 `.nes`
+   （262,160 字节，文件名任意），放进 exe 同级的 `ROM` 文件夹，或直接拖到 exe 图标上。
+3. 运行 `SpriteStage-Soccer.exe`。程序未做代码签名，Windows 可能提示"已保护你的电脑"，
+   选择 *更多信息 → 仍要运行*。
+4. 启动画面按回车直接进入 3D 比赛；`H` 查看全部按键，`F1` 改键，
+   `F2` 在 3D 场景与原始画面之间切换，`0` 切换白宫草坪 / 东京塔夜景两个舞台。
+   完整按键表见包内 `使用说明.txt`（中文）。
+
+### 游戏数据声明
+
+- 本仓库与上游 Release **均不包含、也不分发**任何游戏 ROM。
+- 运行需要玩家自备的 `.nes`，测试版本校验值为
+  SHA-1 `c29da974d39a76b7d1134a81cadaf00b51208151`（去除 16 字节 header 后）。
+- 上游主动做了技术隔离：由游戏图像派生的数据（`sprite_classes.bytes`）以 `SPS2` 格式
+  逐 tile 用玩家自己 ROM 的 CHR 字节做 SHA-256 加密，没有对应 ROM 无法解开。
+- 原游戏的名称、角色与内容版权归其权利人所有。本项目为第三方非官方作品，
+  与权利人无关联、未获授权。
+
+### 上游自己标注的已知限制
+
+> Characters are flat, camera-facing drawings (no side or back views); screens outside
+> matches stay 2D; only MMC3 cartridges with character ROM are supported.
+> Not verified so far: the Windows build has never been run, the look and feel in a real
+> window, controller feel, and sound.
+
+即：Windows 构建在发布时尚未被实际运行验证过，窗口内观感、手感与声音均未经确认。
+上游性能数据取自 Apple M2 Max（2560×1440、4× MSAA、含游戏步进 4.7–6.3 ms/帧）。
+
+### 第三方素材归属（沿用上游）
+
+- 白宫：Historic American Buildings Survey，HABS DC-37（美国政府作品，公有领域）
+- 东京场景建筑：出典 国土交通省 3D都市モデル（Project PLATEAU）港区（2025 年度），经本项目加工
+- 东京塔：依公开尺寸程序化建模；部分远景塔位高来自 Wikidata（CC0）
+- 天空 HDRI 与扫描树木：Poly Haven（CC0）
+- 月球：NASA Scientific Visualization Studio, CGI Moon Kit（公有领域）
+
+---
+
+## 与上游同步
+
+本 fork 不会自动更新。需要拉取上游变更时，在 GitHub 仓库页点击 **Sync fork**，
+或本地执行：
+
+```bash
+git remote add upstream https://github.com/maiziman/SpriteStage-Soccer.git
+git fetch upstream && git merge upstream/main
+```
+
+---
+
 # SpriteStage-Soccer
 
 **Sprite-preserving 3D re-staging of an unmodified 8-bit soccer game**
