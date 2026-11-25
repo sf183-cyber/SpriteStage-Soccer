@@ -1,0 +1,27 @@
+# Unity
+/Library/
+/Temp/
+/Logs/
+/UserSettings/
+/obj/
+/Build/
+/Release/
+*.csproj
+*.sln
+.vs/
+.idea/
+
+# the game itself is never part of the repository
+/ROM/
+*.nes
+
+# intermediate outputs of the scene pipeline
+/Pipeline/out/
+/Pipeline/tex/
+/Pipeline/tokyo/out/
+# PLATEAU's original CityGML (download it yourself: Pipeline/tokyo/SOURCES.md)
+plateau_raw/
+__pycache__/
+
+.DS_Store
+mono_crash*.json

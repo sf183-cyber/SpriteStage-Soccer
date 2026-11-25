@@ -1,0 +1,33 @@
+{
+ "grass": [
+  0.4666666666666667,
+  0.6,
+  0.24705882352941178
+ ],
+ "sunElevation": 37.8369140625,
+ "trees": {
+  "atlasW": 4096,
+  "atlasH": 4544,
+  "cellW": 512,
+  "cellH": 568,
+  "views": 16,
+  "cols": 8,
+  "rowsPerVariant": 2,
+  "species": [
+   {
+    "frameW": 512,
+    "frameH": 448,
+    "widthPerHeight": 1.489939949973919,
+    "heightPerHeight": 1.303697456227179,
+    "base": 0.03
+   },
+   {
+    "frameW": 512,
+    "frameH": 568,
+    "widthPerHeight": 1.1191030760556573,
+    "heightPerHeight": 1.2415049749992448,
+    "base": 0.03
+   }
+  ]
+ }
+}
